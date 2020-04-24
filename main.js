@@ -1,4 +1,5 @@
 $("#currentDay").text(moment().format('dddd, MMMM Do'));
+var currentDate = $("#currentDay").text();
 var nineAm = "";
 var tenAm = "";
 var elevenAm = "";
@@ -144,5 +145,9 @@ function setTextareaClass() {
     } else if (currentHour < 17) {
         ninthHour.removeClass("present")
         ninthHour.addClass("future")
+    }
+    localStorage.setItem("Current Day", currentDate)
+    if (currentDate /= moment().format('dddd, MMMM Do')) {
+        localStorage.clear()
     }
 };
