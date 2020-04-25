@@ -155,6 +155,5 @@ function clearLocalStorage() {
     var compareDate = localStorage.getItem("Current Day")
     if (compareDate != moment().format('dddd, MMMM Do')) {
         localStorage.clear()
-        alert("asd")
     }
 }
