@@ -19,7 +19,6 @@ maintainText();
 $(".firstHour").on("click", "button", function(){
     nineAm = ($("#9").val().trim())
     localStorage.setItem("9am", nineAm)
-    $("#9").text(nineAm)
 });
 
 $(".secondHour").on("click", "button", function(){
@@ -78,75 +77,75 @@ function setTextareaClass() {
     var currentHour = moment().hour()
     var firstHour = $("#9")
     if (currentHour > 9) {
-        firstHour.removeClass("present")
         firstHour.addClass("past")
     } else if (currentHour < 9) {
-        firstHour.removeClass("present")
         firstHour.addClass("future")
+    } else {
+        firstHour.addClass("present")
     }
     var secondHour = $("#10")
     if (currentHour > 10) {
-        secondHour.removeClass("present")
         secondHour.addClass("past")
     } else if (currentHour < 10) {
-        secondHour.removeClass("present")
         secondHour.addClass("future")
+    } else {
+        secondHour.addClass("present")
     }
     var thirdHour = $("#11")
     if (currentHour > 11) {
-        thirdHour.removeClass("present")
         thirdHour.addClass("past")
     } else if (currentHour < 11) {
-        thirdHour.removeClass("present")
         thirdHour.addClass("future")
+    } else {
+        thirdHour.addClass("present")
     }
     var fourthHour = $("#12")
     if (currentHour > 12) {
-        fourthHour.removeClass("present")
         fourthHour.addClass("past")
     } else if (currentHour < 12) {
-        fourthHour.removeClass("present")
         fourthHour.addClass("future")
+    } else {
+        fourthHour.addClass("present")
     }
     var fifthHour = $("#13")
     if (currentHour > 13) {
-        fifthHour.removeClass("present")
         fifthHour.addClass("past")
     } else if (currentHour < 13) {
-        fifthHour.removeClass("present")
         fifthHour.addClass("future")
+    } else {
+        fifthHour.addClass("present")
     }
     var sixthHour = $("#14")
     if (currentHour > 14) {
-        sixthHour.removeClass("present")
         sixthHour.addClass("past")
     } else if (currentHour < 14) {
-        sixthHour.removeClass("present")
         sixthHour.addClass("future")
+    } else {
+        sixthHour.addClass("present")
     }
     var seventhHour = $("#15")
     if (currentHour > 15) {
-        seventhHour.removeClass("present")
         seventhHour.addClass("past")
     } else if (currentHour < 15) {
-        seventhHour.removeClass("present")
         seventhHour.addClass("future")
+    } else {
+        seventhHour.addClass("present")
     }
     var eigthHour = $("#16")
     if (currentHour > 16) {
-        eigthHour.removeClass("present")
         eigthHour.addClass("past")
     } else if (currentHour < 16) {
-        eigthHour.removeClass("present")
         eigthHour.addClass("future")
+    } else {
+        eigthHour.addClass("present")
     }
     var ninthHour = $("#17")
     if (currentHour > 17) {
-        ninthHour.removeClass("present")
         ninthHour.addClass("past")
     } else if (currentHour < 17) {
-        ninthHour.removeClass("present")
         ninthHour.addClass("future")
+    } else {
+        ninthHour.addClass("present")
     }
     localStorage.setItem("Current Day", currentDate)
 };
