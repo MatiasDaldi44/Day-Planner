@@ -1,7 +1,7 @@
-// clearLocalStorage();
+clearLocalStorage();
 
-// $("#currentDay").text(moment().format('dddd, MMMM Do'));
-// var currentDate = $("#currentDay").text();
+$("#currentDay").text(moment().format('dddd, MMMM Do'));
+var currentDate = $("#currentDay").text();
 var nineAm = "";
 var tenAm = "";
 var elevenAm = "";
@@ -148,16 +148,13 @@ function setTextareaClass() {
         ninthHour.removeClass("present")
         ninthHour.addClass("future")
     }
-    if (currentDate /= moment().format('dddd, MMMM Do')) {
-        localStorage.clear()
-    }
-    $("#currentDay").text(moment().format('dddd, MMMM Do'));
-    var currentDate = $("#currentDay").text();
     localStorage.setItem("Current Day", currentDate)
 };
 
 function clearLocalStorage() {
-    if (currentDate === moment().format('dddd, MMMM Do')) {
+    var compareDate = localStorage.getItem("Current Day")
+    if (compareDate != moment().format('dddd, MMMM Do')) {
         localStorage.clear()
+        alert("asd")
     }
 }
